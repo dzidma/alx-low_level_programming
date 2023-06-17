@@ -1,8 +1,9 @@
-#include <stdio.h>
+#include <unistid.h>
+
 /**
  * main - Entery point
  *
- *  Description: C program that prints
+ * Description: C program that prints
  *
  * Return: 1 (not Success)
 */
