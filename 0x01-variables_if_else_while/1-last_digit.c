@@ -3,26 +3,33 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * Description : This program will assign a random number to the variable n 
+ * Description: Prints the last digit of n and provides
+ *              information about it.
  *
- * Return : 0 (success)
-*/
+ * Return: Always 0 (success)
+ */
 
 int main(void)
 {
-	int n;
+	int n, digit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	last_digit = n % 10;
-	printf("Last digit of %d is %d ", n, last_digit);
-	if (last_digit > 5)
-		printf("and is greater than 5\n");
-	else if (last_digit == 0)
-		printf("and is 0\n");
+	digit = n % 10;
+
+	if (n > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n", n, digit);
+	}
+	else if (n < 6 && n != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, digit);
+	}
 	else
-		printf("and is less than 6 and not 0\n");
+	{
+		printf("Last digit of %d is %d and is 0\n", n, digit);
+	}
 	return (0);
 }

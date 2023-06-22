@@ -4,9 +4,9 @@
 /**
  * main - entry point
  *
- * Description : negative or positive validation for a  number
+ * Description: print whether n is positive or negative.
  *
- * Return : 0 (success)
+ * Return: Always 0 (successful).
 */
 
 int main(void)
