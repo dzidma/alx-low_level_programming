@@ -12,7 +12,6 @@
 int main(void)
 {
 	int i, a;
-	int c = 9; /**/
 
 	for (i = 0; i <= 9; i++)
 	{
