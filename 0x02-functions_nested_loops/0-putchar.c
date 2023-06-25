@@ -1,16 +1,23 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Entry point
  *
- * Description: prints _putchar, followed by a new line using printf.
+ * Description: prints _putchar, followed by a new line using header.
  *
  * Return: Always 0 (success)
 */
 
 int main(void)
-{
-	printf("_putchar\n");
+{	
+	int i;
+	char recenica[] = "_putchar";
+	
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(recenica[i]);
+		_putchar('\n');
+	}
 
 	return (0);
 }
