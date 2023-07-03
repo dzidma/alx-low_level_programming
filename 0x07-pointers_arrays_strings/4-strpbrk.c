@@ -5,24 +5,30 @@
  * @s: Pointer to the string to be searched
  * @accept: Pointer to the string containing bytes to be matched
  *
- * Return: Pointer to the byte in 's' that
+ * Return: Pointer to byte in 's' that matches one of the bytes in 'accept',
  *         or NULL if no such byte is found
  */
 char *_strpbrk(char *s, char *accept)
 {
 	int itr, jtr;
-	char *p = NULL;
+	char *p;
 
-	for (itr = 0; s[itr] != '\0'; itr++)
+	itr = 0;
+	while (s[itr] != '\0')
 	{
-		for (jtr = 0; accept[jtr] != '\0'; jtr++)
+		jtr = 0;
+
+		while (accept[jtr] != '\0')
 		{
 			if (s[itr] == accept[jtr])
 			{
 				p = &s[itr];
 				return (p);
 			}
+			jtr++;
 		}
+
+		itr++;
 	}
 
 	return (0);
